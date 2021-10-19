@@ -155,7 +155,8 @@ public class DualityInterface
 		if (mc == InvOperation.markDirty)
 		{
 			TileEntity te = getHost().getTile();
-			te.getWorldObj().markTileEntityChunkModified( te.xCoord, te.yCoord, te.zCoord, te );
+			if (te != null && te.getWorldObj() != null)
+				te.getWorldObj().markTileEntityChunkModified( te.xCoord, te.yCoord, te.zCoord, te );
 		}
 
 		if( this.isWorking )
