@@ -111,29 +111,12 @@ configurations {
 }
 
 dependencies {
-    // installable
-    mods "mcp.mobius.waila:Waila:${waila_version}_${minecraft_version}:dev"
-    mods "mcp.mobius.jabba:Jabba:${jabba_version}_${minecraft_version}:dev"
-    mods "codechicken:EnderStorage:${minecraft_version}-${enderstorage_version}:dev"
-    mods "codechicken:Translocator:${minecraft_version}-${translocator_version}:dev"
-    mods "net.industrial-craft:industrialcraft-2:${ic2_version}-experimental:dev"
-    mods "com.enderio:EnderIO:${minecraft_version}-${enderio_version}:dev"
-//    mods "net.mcft.copy.betterstorage:BetterStorage:${minecraft_version}-${betterstorage_version}:deobf"
-    mods "inventorytweaks:InventoryTweaks:${invtweaks_version}:deobf"
-    mods "li.cil.oc:OpenComputers:MC${minecraft_version}-${opencomputers_version}:dev"
-
-//    mods name: 'CoFHLib', version: "[${minecraft_version}]${cofhlib_version}-dev", ext: 'jar'
-//    mods name: 'CoFHCore', version: "[${minecraft_version}]${cofhcore_version}-dev", ext: 'jar'
-//    mods name: 'ThermalExpansion', version: "[${minecraft_version}]${texpansion_version}-dev", ext: 'jar'
-//    mods name: 'ThermalFoundation', version: "[${minecraft_version}]${tfoundation_version}-dev", ext: 'jar'
-
     // I will not run minecraft with those mods. I don't know why......
     compileOnly "codechicken:ForgeMultipart:${minecraft_version}-${fmp_version}:dev"
     compile "codechicken:CodeChickenLib:${minecraft_version}-${code_chicken_lib_version}:dev"
     compile "codechicken:CodeChickenCore:${minecraft_version}-${code_chicken_core_version}:dev"
-    compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
+    compileOnly "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
     compileOnly "com.gregoriust.gregtech:gregtech:${gt_version}:dev"
-	
 
     compile files("lib/CoFHLib-[1.7.10]1.2.1-185-dev.jar")
     runtimeOnly files("lib/CoFHCore-[1.7.10]3.1.4-329-dev.jar")
