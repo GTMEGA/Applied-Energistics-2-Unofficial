@@ -56,7 +56,7 @@ public enum Settings
 
 	STORAGE_FILTER( EnumSet.allOf( StorageFilter.class ) ), PLACE_BLOCK( EnumSet.of( YesNo.YES, YesNo.NO ) ),
 
-	SCHEDULING_MODE( EnumSet.allOf( SchedulingMode.class ) ), SAVE_SEARCH( EnumSet.of( YesNo.YES, YesNo.NO ) );
+	SCHEDULING_MODE( EnumSet.allOf( SchedulingMode.class ) ), SAVE_SEARCH( EnumSet.of( YesNo.YES, YesNo.NO ) ), CRAFTING_STATUS( EnumSet.of( CraftingStatus.CRAFTING_STATUS));
 
 	private final EnumSet<? extends Enum<?>> values;
 

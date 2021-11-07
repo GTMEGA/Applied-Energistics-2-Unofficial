@@ -333,6 +333,7 @@ gui.tooltips.appliedenergistics2.ItemsRequestable=可请求: %s
 gui.tooltips.appliedenergistics2.P2PFrequency=频率: %s
 gui.tooltips.appliedenergistics2.OreFilterHint=使用矿典名
 gui.tooltips.appliedenergistics2.OreFilter=过滤物品
+gui.tooltips.appliedenergistics2.CraftingStatus=合成情况
 
 # Units
 gui.appliedenergistics2.units.appliedenergstics=AE

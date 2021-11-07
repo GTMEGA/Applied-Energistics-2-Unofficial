@@ -304,6 +304,8 @@ gui.tooltips.appliedenergistics2.BlockPlacementYes=Блоки будут раз�
 gui.tooltips.appliedenergistics2.BlockPlacementNo=Блоки будут выпадать в виде предметов.
 gui.tooltips.appliedenergistics2.ItemsStored=Хранящиеся предметы: %s
 gui.tooltips.appliedenergistics2.ItemsRequestable=Запрашиваемые предметы: %s
+gui.tooltips.appliedenergistics2.CraftingStatus=Статус создания
+gui.tooltips.appliedenergistics2.CraftingStatusDecs=Открывает окно статуса создания
 
 # Units
 gui.appliedenergistics2.units.appliedenergstics=AE

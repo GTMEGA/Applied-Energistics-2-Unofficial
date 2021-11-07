@@ -133,6 +133,7 @@ public final class AEConfig extends Configuration implements IConfigurableObject
 		this.settings.registerSetting( Settings.TERMINAL_STYLE, TerminalStyle.TALL );
 		this.settings.registerSetting( Settings.SEARCH_MODE, SearchBoxMode.AUTOSEARCH );
 		this.settings.registerSetting( Settings.SAVE_SEARCH, YesNo.NO );
+		this.settings.registerSetting( Settings.CRAFTING_STATUS, CraftingStatus.CRAFTING_STATUS );
 
 		this.spawnChargedChance = (float) ( 1.0 - this.get( "worldGen", "spawnChargedChance", 1.0 - this.spawnChargedChance ).getDouble( 1.0 - this.spawnChargedChance ) );
 		this.minMeteoriteDistance = this.get( "worldGen", "minMeteoriteDistance", this.minMeteoriteDistance ).getInt( this.minMeteoriteDistance );
