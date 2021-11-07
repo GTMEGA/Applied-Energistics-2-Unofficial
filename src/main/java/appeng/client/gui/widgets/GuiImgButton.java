@@ -153,7 +153,7 @@ public class GuiImgButton extends GuiButton implements ITooltip
 
 			this.registerApp( 70, Settings.ACTIONS, ActionItems.ORE_FILTER, ButtonToolTips.OreFilter, ButtonToolTips.OreFilterHint );
 			this.registerApp( 71, Settings.ACTIONS, ActionItems.DOUBLE, ButtonToolTips.DoublePattern, ButtonToolTips.DoublePatternHint );
-			this.registerApp( 16 * 14 + 2, Settings.CRAFTING_STATUS, CraftingStatus.CRAFTING_STATUS, ButtonToolTips.CraftingStatus, ButtonToolTips.CraftingStatusDesc );
+			this.registerApp( 16 * 14 + 2, Settings.CRAFTING_STATUS, CraftingStatus.BUTTON, ButtonToolTips.CraftingStatus, ButtonToolTips.CraftingStatusDesc );
 		}
 	}
 
