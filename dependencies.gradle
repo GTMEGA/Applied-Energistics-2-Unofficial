@@ -16,10 +16,10 @@ dependencies {
     compileOnly("com.github.GTNewHorizons:inventory-tweaks:master-SNAPSHOT:api") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:waila:master-SNAPSHOT:dev") {
+    compileOnly("com.github.GTNewHorizons:waila:master-SNAPSHOT:api") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:Railcraft:master-SNAPSHOT:dev") {
+    compileOnly("com.github.GTNewHorizons:Railcraft:master-SNAPSHOT:api") {
         transitive = false
     }
 
@@ -35,7 +35,7 @@ dependencies {
     compileOnly("curse.maven:minefactory-reloaded-66672:2366150") {
         transitive = false
     }
-    compileOnly("li.cil.oc:OpenComputers:MC1.7.10-1.7.5.1356:dev") {
+    compileOnly("li.cil.oc:OpenComputers:MC1.7.10-1.7.5.1356:api") {
         transitive = false
     }
     compileOnly("pneumaticCraft:PneumaticCraft-1.7.10:1.12.7-152:api") {
