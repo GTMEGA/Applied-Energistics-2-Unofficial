@@ -478,7 +478,7 @@ if (isNewBuildScriptVersionAvailable()) {
 }
 
 static URL availableBuildScriptUrl() {
-    new URL("https://raw.githubusercontent.com/SinTh0r4s/ExampleMod1.7.10/main/build.gradle")
+    new URL("https://raw.githubusercontent.com/FalsePattern/ExampleMod1.7.10/main/build.gradle")
 }
 
 static boolean updateBuildScript() {
