@@ -1,19 +1,19 @@
 // Add your dependencies here
 
 dependencies {
-    compileOnly("com.github.GTNewHorizons:CodeChickenLib:master-SNAPSHOT:dev") {
+    compileOnly("codechicken:codechickenlib-mc1.7.10:1.1.4-gtmega:dev") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:NotEnoughItems:master-SNAPSHOT:dev") {
+    compileOnly("codechicken:notenoughitems-mc1.7.10:2.1.5-gtmega:dev") {
         transitive = false
     }
     compileOnly("com.github.GTNewHorizons:ForgeMultipart:master-SNAPSHOT:dev") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:master-SNAPSHOT:dev") {
+    compileOnly("gtmega:gt5u-mc1.7.10:5.28.25-gtmega:dev") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:inventory-tweaks:master-SNAPSHOT:api") {
+    compileOnly("gtmega:inventorytweaks-mc1.7.10:1.59.0-dev_156") {
         transitive = false
     }
     compileOnly("com.github.GTNewHorizons:waila:master-SNAPSHOT:api") {
