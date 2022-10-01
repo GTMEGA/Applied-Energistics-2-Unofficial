@@ -22,10 +22,11 @@ repositories {
         }
     }
     maven {
-        url "https://cursemaven.com"
+        name = "cursemaven"
+        url "https://mvn.falsepattern.com/cursemaven"
     }
     maven {
-        name = "jitpack.io"
-        url = "https://jitpack.io"
+        name = "jitpack"
+        url = "https://mvn.falsepattern.com/jitpack"
     }
 }
