@@ -19,6 +19,8 @@
 package appeng.client.render;
 
 
+import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
+
 import appeng.block.AEBaseBlock;
 import appeng.core.AELog;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
@@ -36,23 +38,17 @@ import java.util.Map;
 
 
 @SideOnly( Side.CLIENT )
+@ThreadSafeISBRH(perThread = true)
 public final class WorldRender implements ISimpleBlockRenderingHandler
 {
 
 	public static final WorldRender INSTANCE = new WorldRender();
 	private final Map<AEBaseBlock, BaseBlockRender> blockRenders = new HashMap<AEBaseBlock, BaseBlockRender>();
-	private final int renderID = RenderingRegistry.getNextAvailableRenderId();
+	private static final int renderID = RenderingRegistry.getNextAvailableRenderId();
 	private final RenderBlocks renderer = new RenderBlocks();
 	private boolean hasError = false;
 
-	private WorldRender()
-	{
-	}
-
-	void setRender( final AEBaseBlock in, final BaseBlockRender r )
-	{
-		this.blockRenders.put( in, r );
-	}
+	public WorldRender() {}
 
 	@Override
 	public void renderInventoryBlock( final Block block, final int metadata, final int modelID, final RenderBlocks renderer )

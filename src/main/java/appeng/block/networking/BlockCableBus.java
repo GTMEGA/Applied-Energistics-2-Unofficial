@@ -234,7 +234,7 @@ public class BlockCableBus extends AEBaseTileBlock implements IRedNetConnection
 	@Override
 	public boolean canRenderInPass( final int pass )
 	{
-		BusRenderHelper.INSTANCE.setPass( pass );
+		BusRenderHelper.instances.get().setPass( pass );
 
 		if( AEConfig.instance.isFeatureEnabled( AEFeature.AlphaPass ) )
 		{

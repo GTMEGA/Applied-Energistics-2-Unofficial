@@ -27,11 +27,15 @@ import appeng.api.parts.IPartRenderHelper;
 import appeng.api.parts.ISimplifiedBundle;
 import appeng.block.AEBaseBlock;
 import appeng.block.networking.BlockCableBus;
+import appeng.client.texture.FlippableIcon;
+import appeng.client.texture.MissingIcon;
 import appeng.core.AEConfig;
 import appeng.core.features.AEFeature;
 import appeng.tile.AEBaseTile;
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
+import lombok.val;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -47,7 +51,7 @@ import java.util.EnumSet;
 @SideOnly( Side.CLIENT )
 public final class BusRenderHelper implements IPartRenderHelper
 {
-	public static final BusRenderHelper INSTANCE = new BusRenderHelper();
+	public static final ThreadLocal<BusRenderHelper> instances = ThreadLocal.withInitial(BusRenderHelper::new);
 	private static final int HEX_WHITE = 0xffffff;
 
 	private final BoundBoxCalculator bbc;
@@ -478,8 +482,15 @@ public final class BusRenderHelper implements IPartRenderHelper
 			final AEBaseBlock block = (AEBaseBlock) multiPart;
 
 			final BlockRenderInfo info = block.getRendererInstance();
-			final ForgeDirection forward = BusRenderHelper.INSTANCE.az;
-			final ForgeDirection up = BusRenderHelper.INSTANCE.ay;
+			val instance = BusRenderHelper.instances.get();
+			final ForgeDirection forward = instances.get().az;
+			final ForgeDirection up = instance.ay;
+			boolean isTemp = false;
+			if (!info.isValid() && !info.hasTemporaryRenderIcons()) {
+				final FlippableIcon i = new FlippableIcon(new MissingIcon(this));
+				info.setTemporaryRenderIcon(i);
+				isTemp = true;
+			}
 
 			renderer.uvRotateBottom = info.getTexture( ForgeDirection.DOWN ).setFlip( BaseBlockRender.getOrientation( ForgeDirection.DOWN, forward, up ) );
 			renderer.uvRotateTop = info.getTexture( ForgeDirection.UP ).setFlip( BaseBlockRender.getOrientation( ForgeDirection.UP, forward, up ) );
@@ -493,6 +504,9 @@ public final class BusRenderHelper implements IPartRenderHelper
 			this.bbr.renderBlockBounds( renderer, this.minX, this.minY, this.minZ, this.maxX, this.maxY, this.maxZ, this.ax, this.ay, this.az );
 
 			renderer.renderStandardBlock( block, x, y, z );
+			if (isTemp) {
+				info.setTemporaryRenderIcon(null);
+			}
 		}
 	}
 

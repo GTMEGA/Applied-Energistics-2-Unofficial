@@ -34,6 +34,7 @@ minecraft_fp {
 }
 
 repositories {
+    exclusive(mavenpattern(), "com.falsepattern")
     ic2EX()
     exclusive(maven("k-4u", "https://mvn.falsepattern.com/k-4u"), "pneumaticCraft")
     exclusive(maven("cil", "https://mvn.falsepattern.com/cil") {
@@ -57,6 +58,9 @@ repositories {
 }
 
 dependencies {
+    compileOnly("com.github.GTNewHorizons:Angelica:1.0.0-beta28:api") {
+        excludeDeps()
+    }
     compileOnly("codechicken:codechickencore-mc1.7.10:1.4.0-mega:dev") {
         excludeDeps()
     }

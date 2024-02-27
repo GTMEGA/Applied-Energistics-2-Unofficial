@@ -21,6 +21,8 @@ package appeng.client.render;
 
 import appeng.api.parts.ISimplifiedBundle;
 import appeng.core.AELog;
+import lombok.val;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -116,27 +118,28 @@ public class RenderBlocksWorkaround extends RenderBlocks
 
 	private boolean renderStandardBlockNoCalculations( final Block b, final int x, final int y, final int z )
 	{
-		Tessellator.instance.setBrightness( this.lightState.bXPos );
+		val tess = Tessellator.instance;
+		tess.setBrightness( this.lightState.bXPos );
 		this.restoreAO( this.lightState.aoXPos, this.lightState.foXPos );
 		this.renderFaceXPos( b, x, y, z, this.isUseTextures() ? this.lightState.rXPos : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.EAST.ordinal() ) );
 
-		Tessellator.instance.setBrightness( this.lightState.bXNeg );
+		tess.setBrightness( this.lightState.bXNeg );
 		this.restoreAO( this.lightState.aoXNeg, this.lightState.foXNeg );
 		this.renderFaceXNeg( b, x, y, z, this.isUseTextures() ? this.lightState.rXNeg : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.WEST.ordinal() ) );
 
-		Tessellator.instance.setBrightness( this.lightState.bYPos );
+		tess.setBrightness( this.lightState.bYPos );
 		this.restoreAO( this.lightState.aoYPos, this.lightState.foYPos );
 		this.renderFaceYPos( b, x, y, z, this.isUseTextures() ? this.lightState.rYPos : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.UP.ordinal() ) );
 
-		Tessellator.instance.setBrightness( this.lightState.bYNeg );
+		tess.setBrightness( this.lightState.bYNeg );
 		this.restoreAO( this.lightState.aoYNeg, this.lightState.foYNeg );
 		this.renderFaceYNeg( b, x, y, z, this.isUseTextures() ? this.lightState.rYNeg : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.DOWN.ordinal() ) );
 
-		Tessellator.instance.setBrightness( this.lightState.bZPos );
+		tess.setBrightness( this.lightState.bZPos );
 		this.restoreAO( this.lightState.aoZPos, this.lightState.foZPos );
 		this.renderFaceZPos( b, x, y, z, this.isUseTextures() ? this.lightState.rZPos : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.SOUTH.ordinal() ) );
 
-		Tessellator.instance.setBrightness( this.lightState.bZNeg );
+		tess.setBrightness( this.lightState.bZNeg );
 		this.restoreAO( this.lightState.aoZNeg, this.lightState.foZNeg );
 		this.renderFaceZNeg( b, x, y, z, this.isUseTextures() ? this.lightState.rZNeg : this.getBlockIcon( b, this.blockAccess, x, y, z, ForgeDirection.NORTH.ordinal() ) );
 
@@ -563,6 +566,7 @@ public class RenderBlocksWorkaround extends RenderBlocks
 
 	private void partialLightingColoring( final double u, final double v )
 	{
+		val tess = Tessellator.instance;
 		final double rA = this.colorRedTopLeft * u + ( 1.0 - u ) * this.colorRedTopRight;
 		final double rB = this.colorRedBottomLeft * u + ( 1.0 - u ) * this.colorRedBottomRight;
 		final float r = (float) ( rA * v + rB * ( 1.0 - v ) );
@@ -585,8 +589,8 @@ public class RenderBlocksWorkaround extends RenderBlocks
 
 		final int out = ( high << 16 ) | low;
 
-		Tessellator.instance.setColorRGBA_F( r, g, b, this.getOpacity() );
-		Tessellator.instance.setBrightness( out );
+		tess.setColorRGBA_F( r, g, b, this.getOpacity() );
+		tess.setBrightness( out );
 	}
 
 	public boolean similarLighting( final Block blk, final IBlockAccess w, final int x, final int y, final int z, final ISimplifiedBundle sim )
