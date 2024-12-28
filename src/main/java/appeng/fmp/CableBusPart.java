@@ -169,12 +169,12 @@ public class CableBusPart extends JCuboidPart implements JNormalOcclusion, IMask
 	{
 		if( pass == 0 || ( pass == 1 && AEConfig.instance.isFeatureEnabled( AEFeature.AlphaPass ) ) )
 		{
-			BusRenderHelper.INSTANCE.setPass( pass );
+			BusRenderHelper.instances.get().setPass( pass );
 			BusRenderer.INSTANCE.getRenderer().renderAllFaces = true;
 			BusRenderer.INSTANCE.getRenderer().blockAccess = this.world();
 			BusRenderer.INSTANCE.getRenderer().overrideBlockTexture = null;
 			this.getCableBus().renderStatic( pos.x, pos.y, pos.z );
-			return BusRenderHelper.INSTANCE.getItemsRendered() > 0;
+			return BusRenderHelper.instances.get().getItemsRendered() > 0;
 		}
 		return false;
 	}
@@ -184,7 +184,7 @@ public class CableBusPart extends JCuboidPart implements JNormalOcclusion, IMask
 	{
 		if( pass == 0 || ( pass == 1 && AEConfig.instance.isFeatureEnabled( AEFeature.AlphaPass ) ) )
 		{
-			BusRenderHelper.INSTANCE.setPass( pass );
+			BusRenderHelper.instances.get().setPass( pass );
 			this.getCableBus().renderDynamic( pos.x, pos.y, pos.z );
 		}
 	}
