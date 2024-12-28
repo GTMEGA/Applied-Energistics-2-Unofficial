@@ -1,23 +1,23 @@
 plugins {
-    id("fpgradle-minecraft") version("0.10.0")
+    id("fpgradle-minecraft") version ("0.10.0")
 }
 
 group = "mega"
 
 minecraft_fp {
     mod {
-        modid   = "appliedenergistics2"   //REQUIRED
-        name    = "Applied Energistics 2"  //REQUIRED
-        rootPkg = "appeng" //REQUIRED
+        modid = "appliedenergistics2"
+        name = "Applied Energistics 2"
+        rootPkg = "appeng"
     }
 
     api {
-        packages          = listOf("api") //Convention
+        packages = listOf("api")
     }
 
     core {
-        coreModClass                   = "transformer.AppEngCore"      //optional
-        accessTransformerFile          = "appeng_at.cfg" //optional
+        coreModClass = "transformer.AppEngCore"
+        accessTransformerFile = "appeng_at.cfg"
     }
 
     tokens {
@@ -27,7 +27,7 @@ minecraft_fp {
     publish {
         changelog = "https://github.com/GTMEGA/Applied-Energistics-2-Unofficial/releases/tag/$version"
         maven {
-            repoUrl  = "https://mvn.falsepattern.com/gtmega_releases"
+            repoUrl = "https://mvn.falsepattern.com/gtmega_releases"
             repoName = "mega"
         }
     }
