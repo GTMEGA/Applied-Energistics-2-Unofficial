@@ -45,7 +45,7 @@ public abstract class CommonHelper
 
 	public abstract void bindTileEntitySpecialRenderer( Class tile, AEBaseBlock blk );
 
-	public abstract List<EntityPlayer> getPlayers();
+	public abstract List<? extends EntityPlayer> getPlayers();
 
 	public abstract void sendToAllNearExcept( EntityPlayer p, double x, double y, double z, double dist, World w, AppEngPacket packet );
 

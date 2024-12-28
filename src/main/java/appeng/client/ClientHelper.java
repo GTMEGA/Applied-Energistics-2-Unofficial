@@ -128,7 +128,7 @@ public class ClientHelper extends ServerHelper
 	}
 
 	@Override
-	public List<EntityPlayer> getPlayers()
+	public List<? extends EntityPlayer> getPlayers()
 	{
 		if( Platform.isClient() )
 		{

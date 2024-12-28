@@ -66,7 +66,7 @@ public class ServerHelper extends CommonHelper
 	}
 
 	@Override
-	public List<EntityPlayer> getPlayers()
+	public List<? extends EntityPlayer> getPlayers()
 	{
 		if( !Platform.isClient() )
 		{
