@@ -66,7 +66,7 @@ public enum AEColor
 
 	Green( "gui.appliedenergistics2.Green", 0x45A021, 0x60E32E, 0xE3F2E3 ),
 
-	Red( "gui.appliedenergistics2.Red", 0xA50029, 0xFF003C, 0xFFE6ED ),
+	Red( "gui.appliedenergistics2.Red", 0x600A0A, 0x8A0F0F, 0xCC1616 ),
 
 	Black( "gui.appliedenergistics2.Black", 0x2B2B2B, 0x565656, 0x848484 ),
 

@@ -242,17 +242,18 @@ public abstract class AbstractPartMonitor extends AbstractPartDisplay implements
 		}
 	}
 
-	@Override
-	@SideOnly( Side.CLIENT )
-	protected void finalize() throws Throwable
-	{
-		super.finalize();
-
-		if( this.dspList != null )
-		{
-			GLAllocation.deleteDisplayLists( this.dspList );
-		}
-	}
+//  Crash the game
+//	@Override
+//	@SideOnly( Side.CLIENT )
+//	protected void finalize() throws Throwable
+//	{
+//		super.finalize();
+//
+//		if( this.dspList != null )
+//		{
+//			GLAllocation.deleteDisplayLists( this.dspList );
+//		}
+//	}
 
 	@Override
 	@SideOnly( Side.CLIENT )
