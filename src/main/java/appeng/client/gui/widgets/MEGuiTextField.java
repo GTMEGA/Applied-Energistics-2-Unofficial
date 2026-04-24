@@ -51,11 +51,11 @@ public class MEGuiTextField extends GuiTextField {
 	 * @param height       absolute height
 	 */
 	public MEGuiTextField(final FontRenderer fontRenderer, final int xPos, final int yPos, final int width, final int height) {
-		super(fontRenderer, xPos + PADDING, yPos + PADDING, width - 2 * PADDING - fontRenderer.getCharWidth('_'), height - 2 * PADDING);
+		super(fontRenderer, xPos + PADDING - 71, yPos + PADDING, width  - 2 * PADDING - fontRenderer.getCharWidth('_') + 40, height - 2 * PADDING);
 
-		this._xPos = xPos;
+		this._xPos = xPos; //Magic offset for DWS 71
 		this._yPos = yPos;
-		this._width = width;
+		this._width = width; //Magic bonus width for DWS 40
 		this._height = height;
 	}
 

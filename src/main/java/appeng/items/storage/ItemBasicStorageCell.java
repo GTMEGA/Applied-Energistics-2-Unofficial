@@ -68,25 +68,25 @@ public final class ItemBasicStorageCell extends AEBaseItem implements IStorageCe
 
 		this.setFeature( EnumSet.of( AEFeature.StorageCells ) );
 		this.setMaxStackSize( 1 );
-		this.totalBytes = kilobytes * 1024;
+		this.totalBytes = kilobytes * 256; //Nerf em big tiem boi
 		this.component = whichCell;
 
 		switch( this.component )
 		{
 			case Cell1kPart:
-				this.idleDrain = 0.5;
+				this.idleDrain = 1.0;
 				this.perType = 8;
 				break;
 			case Cell4kPart:
-				this.idleDrain = 1.0;
+				this.idleDrain = 4.0;
 				this.perType = 32;
 				break;
 			case Cell16kPart:
-				this.idleDrain = 1.5;
+				this.idleDrain = 16.0;
 				this.perType = 128;
 				break;
 			case Cell64kPart:
-				this.idleDrain = 2.0;
+				this.idleDrain = 64.0;
 				this.perType = 512;
 				break;
 			default:

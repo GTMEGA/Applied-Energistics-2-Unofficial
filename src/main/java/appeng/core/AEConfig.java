@@ -79,7 +79,7 @@ public final class AEConfig extends Configuration implements IConfigurableObject
 	public boolean enableEffects = true;
 	public boolean useLargeFonts = false;
 	public boolean useColoredCraftingStatus;
-	public boolean preserveSearchBar = true;
+	public boolean preserveSearchBar = false;
 	public int wirelessTerminalBattery = 1600000;
 	public int entropyManipulatorBattery = 200000;
 	public int matterCannonBattery = 200000;
