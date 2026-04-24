@@ -98,7 +98,7 @@ public class PartStorageBus extends PartUpgradeable
 	public PartStorageBus( final ItemStack is )
 	{
 		super( is );
-		this.getConfigManager().registerSetting( Settings.ACCESS, AccessRestriction.READ_WRITE );
+		this.getConfigManager().registerSetting( Settings.ACCESS, AccessRestriction.READ ); //Needed this to make storage busses 1-way only to prevent abuse in MEGA. To restore it to vanilla AE set this to read-write.
 		this.getConfigManager().registerSetting( Settings.FUZZY_MODE, FuzzyMode.IGNORE_ALL );
 		this.getConfigManager().registerSetting( Settings.STORAGE_FILTER, StorageFilter.EXTRACTABLE_ONLY );
 		this.mySrc = new MachineSource( this );
