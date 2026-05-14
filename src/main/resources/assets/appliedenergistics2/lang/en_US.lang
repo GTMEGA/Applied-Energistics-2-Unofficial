@@ -126,7 +126,7 @@ gui.appliedenergistics2.StoredPower=Stored Power
 gui.appliedenergistics2.MaxPower=Max Power
 gui.appliedenergistics2.QuartzCuttingKnife=Quartz Cutting Knife
 gui.appliedenergistics2.Inscriber=Inscriber
-gui.appliedenergistics2.Wireless=Wireless Access Point
+gui.appliedenergistics2.Wireless=Wifi Access Point
 gui.appliedenergistics2.WirelessTerminal=Wireless Term
 gui.appliedenergistics2.NoPermissions=No Permissions Selected
 gui.appliedenergistics2.SecurityCardEditor=Biometric Card Editor
@@ -370,7 +370,7 @@ gui.appliedenergistics2.Brown=Brown
 gui.appliedenergistics2.Green=Green
 gui.appliedenergistics2.Red=Red
 gui.appliedenergistics2.Black=Black
-gui.appliedenergistics2.Fluix=Fluix
+gui.appliedenergistics2.Fluix=Certus
 
 # Waila
 waila.appliedenergistics2.Crafting=Crafting

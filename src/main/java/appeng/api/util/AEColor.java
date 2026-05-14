@@ -38,17 +38,17 @@ import java.util.List;
 public enum AEColor
 {
 
-	White( "gui.appliedenergistics2.White", 0xBEBEBE, 0xDBDBDB, 0xFAFAFA ),
+	White( "gui.appliedenergistics2.White", 0x737373, 0x999999, 0xD1D1D1 ),
 
-	Orange( "gui.appliedenergistics2.Orange", 0xF99739, 0xFAAE44, 0xF4DEC3 ),
+	Orange( "gui.appliedenergistics2.Orange", 0xCC6600, 0xff8000, 0xFF9933 ),
 
-	Magenta( "gui.appliedenergistics2.Magenta", 0x821E82, 0xB82AB8, 0xC598C8 ),
+	Magenta( "gui.appliedenergistics2.Magenta", 0x990099, 0xCC00CC, 0xCC3DCC ),
 
-	LightBlue( "gui.appliedenergistics2.LightBlue", 0x628DCB, 0x82ACE7, 0xD8F6FF ),
+	LightBlue( "gui.appliedenergistics2.LightBlue", 0x3BB8B8, 0x80DCDC, 0xA9FFFF ),
 
 	Yellow( "gui.appliedenergistics2.Yellow", 0xFFF7AA, 0xF8FF4A, 0xFFFFE8 ),
 
-	Lime( "gui.appliedenergistics2.Lime", 0x7CFF4A, 0xBBFF51, 0xE7F7D7 ),
+	Lime( "gui.appliedenergistics2.Lime", 0x308E19, 0x3BBE2C, 0x6CE96B ),
 
 	Pink( "gui.appliedenergistics2.Pink", 0xDC8DB5, 0xF8B5D7, 0xF7DEEB ),
 
@@ -64,13 +64,13 @@ public enum AEColor
 
 	Brown( "gui.appliedenergistics2.Brown", 0x724E35, 0xB7967F, 0xE0D2C8 ),
 
-	Green( "gui.appliedenergistics2.Green", 0x45A021, 0x60E32E, 0xE3F2E3 ),
+	Green( "gui.appliedenergistics2.Green", 0x287128, 0x329032, 0x56AA56 ),
 
 	Red( "gui.appliedenergistics2.Red", 0x600A0A, 0x8A0F0F, 0xCC1616 ),
 
-	Black( "gui.appliedenergistics2.Black", 0x2B2B2B, 0x565656, 0x848484 ),
+	Black( "gui.appliedenergistics2.Black", 0x080808, 0x201C20, 0x302C30 ),
 
-	Transparent( "gui.appliedenergistics2.Fluix", 0x1B2344, 0x895CA8, 0xD7BBEC );
+	Transparent( "gui.appliedenergistics2.Fluix", 0x455E93, 0x98A4BC, 0xACB8CB );
 
 	public static final List<AEColor> VALID_COLORS = Arrays.asList( White, Orange, Magenta, LightBlue, Yellow, Lime, Pink, Gray, LightGray, Cyan, Purple, Blue, Brown, Green, Red, Black );
 
